@@ -1,0 +1,8 @@
+tensorflow_gpu==1.13.1
+easydict==1.9
+scipy==1.2.1
+six==1.11.0
+numpy==1.13.3
+prettytensor==0.7.4
+PyYAML==5.3.1
+scikit_learn==0.23.1
