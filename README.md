@@ -20,7 +20,7 @@ A GAN-based Expectation-Maximization Model for Zero-Shot Retrieval of Images fro
     - [Acknowledgement](#acknowledgement)
 
 ### Summary
-Implementation of the proposed algorithm in the paper **ZSCRGAN: A GAN-based Expectation-Maximization Model for Zero-Shot Retrieval of Images from Textual Descriptions.**(to be presented at the *ACM International Conference on Information and Knowledge Management (CIKM2020)*) by Anurag Roy, Vinay Kumar Verma, Kripabandhu Ghosh, Saptarshi Ghosh. The proposed model performs zero-shot retrieval of images from their textual descriptions . The  following image gives a schematic view of our proposed model:
+Implementation of the proposed algorithm in the paper **ZSCRGAN: A GAN-based Expectation-Maximization Model for Zero-Shot Retrieval of Images from Textual Descriptions**(to be presented at the *ACM International Conference on Information and Knowledge Management (CIKM2020)*). by Anurag Roy, Vinay Kumar Verma, Kripabandhu Ghosh, Saptarshi Ghosh. The proposed model performs zero-shot retrieval of images from their textual descriptions . The  following image gives a schematic view of our proposed model:
 ![ZSCRGAN](ZSCRGAN.png)
 
 
