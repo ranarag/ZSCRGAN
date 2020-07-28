@@ -41,6 +41,8 @@ class CondGANTrainer(object):
         self.batch_size = self.args.batch_size
         self.max_epoch = self.args.epochs
         self.log_vars = []
+        
+######## Storing test image embeds ###########################        
         self.flat_image_embed_list = []
         for class_label, embedding_list in self.dataset.train.image_dict.iteritems():
             if class_label not in self.dataset.train.testids:
@@ -53,21 +55,9 @@ class CondGANTrainer(object):
         for i, (label, embed) in enumerate(self.flat_image_embed_list):
             self.test_img_X[i,:] = embed
             self.test_img_Y[i]= label
-        unique, counts = np.unique(self.test_img_Y, return_counts=True)
-        self.img_per_class = dict(zip(unique, counts))
-        flat_image_embed_list = []
-        for class_label, embedding_list in self.dataset.train.image_dict.iteritems():
-            if class_label not in self.dataset.train.trainids:
-                continue
-            for embed in embedding_list:
-                flat_image_embed_list.append((class_label, embed))
-        self.X = np.zeros((len(flat_image_embed_list), self.dataset.image_shape))
-        self.Y = np.zeros((len(flat_image_embed_list)), dtype=int)
-
-        for i, (label, embed) in enumerate(flat_image_embed_list):
-            self.X[i,:] = embed
-            self.Y[i]= label
-
+            
+            
+######## Storing test text embeds #############################
         flat_txt_embed_list = []
         for class_label, embedding_list in self.dataset.train.embedding_dict.iteritems():
             if class_label not in self.dataset.train.testids:
